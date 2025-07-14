@@ -1,0 +1,235 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: #0066ff;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1 1 300px;
+}
+
+.about-img {
+  position: relative;
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
+.about-img::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  background-color: #0066ff;
+  border-radius: 12px;
+  z-index: 0;
+  transform: rotate(-5deg);
+}
+
+.about-img img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transform: rotate(5deg);
+}
+
+/* Skills Section */
+.skills {
+  background: #111;
+  border-radius: 8px;
+}
+
+.skills-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.skill-bar {
+  margin-bottom: 1.5rem;
+}
+
+.skill-title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  flex-wrap: wrap;
+}
+
+.bar {
+  background-color: #333;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 8px;
+  margin-top: 5px;
+}
+
+.bar-fill {
+  background-color: #0066ff;
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Projects Section */
+.projects {
+  background: #111;
+  border-radius: 8px;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-item {
+  background: #1e1e1e;
+  border: 2px solid #0066ff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.project-item:hover {
+  transform: scale(1.03);
+  background-color: #0066ff;
+  color: #fff;
+}
+
+.project-item:hover h3,
+.project-item:hover a,
+.project-item:hover p {
+  color: #fff !important;
+}
+
+.project-item a {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 0.95rem;
+}
+
+/* Work Experience Section */
+.work-experience {
+  background: #111;
+  padding: 4rem 0;
+  margin-top: 2rem;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+.experience-item {
+  background: linear-gradient(to right, #0066ff, #1e1e1e);
+  padding: 2rem;
+  border-radius: 8px;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.experience-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.experience-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-item .role {
+  display: block;
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 0.25rem;
+}
+
+.experience-item .date {
+  display: block;
+  font-size: 0.95rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+.experience-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .skill-title {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
